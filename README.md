@@ -18,3 +18,9 @@ Le hash des blocs ne pourra être effectué que par puissance de calcul Quantiqu
 Le système de transfert de clés lors des transactions serait basé sur le Post Quantum Cryptography ce qui permettrait de résister aux attaques quantiques visant à détourner les clés lors des transactions. 
 Cette blockchain aurait pour bénéfice la rapidité d’exchange, limitant les frais de transaction interne induits par différentes saturations. 
 De plus la sécurité y serait optimum par la puissance de calcul déployée, ce qui empêcherait des recalculs de bloc déjà validé par la Blockchain.
+
+<H2>Sources à consulter </H2>
+<li>
+  <ul>test</ul>
+</li>
+  
