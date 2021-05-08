@@ -1,5 +1,8 @@
-# Qblockchain
-This project is a concept of quantum proof blockchain that uses Grover's algorithm to mine and verify the transactions
+# Qblockchain by Crypto Babies
+
+<H2>Punchline du Projet </H2>
+
+Devant la montée en puissance des cryptomonnaies et de la blockchain dans les années futures ainsi que de la technologie quantique, nous avons imaginé un écosystème financier complet, totalement décentralisé et quantique, fonctionnant sur un principe de blockchain. 
 
 ** Postulats à 15 ans : **
 
