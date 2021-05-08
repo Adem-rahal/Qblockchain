@@ -26,6 +26,7 @@ De plus la sécurité y serait optimum par la puissance de calcul déployée, ce
 <li>blockchain.py</li>
 <ul><li>Contient l'ensemble du code de notre blockchain. Nous allons ajouter "soon" le Quantum Proof. [Mise à jour en cours]</li></ul>
 <li>grover_minning.py</li>
-<ul><li>Code source qui contient la totalité de l'algorithme qui permet de miner avec un ordinateur quantique.</li></ul>
+<ul><li>Code source qui contient la totalité de l'algorithme qui permet de miner avec un ordinateur quantique. (on utilise l'annulation d'amplitude de l'algorithm de grover pour retrouver les hash respectant la condition de la target <=k bien plus rapidement qu`avec un ordinateur classic) </li></ul>
+
   
   
