@@ -17,6 +17,7 @@ Les ordinateurs quantiques deviendront une réelle menace de sécurité quant au
 Création d’un éco-système financier décentralisé quantique, fonctionnant sur un principe de blockchain. 
 Le hash des blocs ne pourra être effectué que par puissance de calcul Quantique, étant donné qu’un ordinateur classique serait désuet.
 Le système de transfert de clés lors des transactions serait basé sur le Post Quantum Cryptography ce qui permettrait de résister aux attaques quantiques visant à détourner les clés lors des transactions. 
+Avant de pouvoir mettre en place le systeme de QKD (quantum key distribution) qui assurerais la sécurité total des transactions, c'est un système inviolable mais qui requiert une connexion physique entre les ordinateurs quantique qui va mettre du temps à être mis en place.
 Cette blockchain aurait pour bénéfice la rapidité d’exchange, limitant les frais de transaction interne induits par différentes saturations. 
 De plus la sécurité y serait optimum par la puissance de calcul déployée, ce qui empêcherait des recalculs de bloc déjà validé par la Blockchain.
 
