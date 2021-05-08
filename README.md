@@ -20,7 +20,5 @@ Cette blockchain aurait pour bénéfice la rapidité d’exchange, limitant les 
 De plus la sécurité y serait optimum par la puissance de calcul déployée, ce qui empêcherait des recalculs de bloc déjà validé par la Blockchain.
 
 <H2>Sources à consulter </H2>
-<li>
-  <ul>test</ul>
-</li>
+<li>test</li>
   
