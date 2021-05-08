@@ -21,11 +21,11 @@ Cette blockchain aurait pour bénéfice la rapidité d’exchange, limitant les 
 De plus la sécurité y serait optimum par la puissance de calcul déployée, ce qui empêcherait des recalculs de bloc déjà validé par la Blockchain.
 
 <H2>Sources à consulter </H2>
-<li>[Hackathon 2021.2.pdf](https://github.com/Adem-rahal/Qblockchain/blob/main/Hackathon%202021.2.pdf)</li>
+<li>Hackathon 2021.2.pdf</li>
 <ul><li>Fichier qui explique notre vision, les reflexions apportées à notre projet, ainsi que les avantages, risques et solutions apportées.</li></ul>
-<li>[blockchain.py](https://github.com/Adem-rahal/Qblockchain/blob/main/blockchain.py)</li>
+<li>blockchain.py</li>
 <ul><li>Contient l'ensemble du code de notre blockchain. Nous allons ajouter "soon" le Quantum Proof. [Mise à jour en cours]</li></ul>
-<li>[grover_minning.py](https://github.com/Adem-rahal/Qblockchain/blob/main/grover_minning.py)</li>
+<li>grover_minning.py</li>
 <ul><li>Code source qui contient la totalité de l'algorithme qui permet de miner avec un ordinateur quantique. (on utilise l'annulation d'amplitude de l'algorithm de grover pour retrouver les hash respectant la condition de la target <=k bien plus rapidement qu`avec un ordinateur classic) </li></ul>
 
   
