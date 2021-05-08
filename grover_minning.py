@@ -2,7 +2,7 @@ from qiskit.quantum_info import Operator
 from qiskit import QuantumCircuit
 import numpy as np
 import matplotlib.pyplot as plt
-
+import random
 
 '''Here we are looking to build a minning algorithm that would give the 
 advantage to quantum computers in our new blockchain. For this we implement a
@@ -17,8 +17,8 @@ as bitcoins, to "mine" quicker than the other miners.'''
 k=3
 
 #The hash function is here to test the code it will be improved later
-def hash(x):
-    return x
+def hash_6(x):
+    return x+1
 
 def phase_oracle(n, k, name = 'Oracle'):
     
@@ -34,7 +34,7 @@ def phase_oracle(n, k, name = 'Oracle'):
     #add the -1 phase to elements that's satisfy the mining challenge H(x) <= k
         
         for i in range(2**n):
-            if hash(i) <= k:
+            if hash_6(i) <= k:
                 oracle_matrix[i, i] = -1
                 marked_elements_counter+=1
 
@@ -89,3 +89,6 @@ counts = execute(mycircuit, backend=simulator, shots=1000).result().get_counts(m
 from qiskit.visualization import plot_histogram
 plot_histogram(counts)
 plt.show()
+
+'''We can conclude seing the results here that we have more than 99% of chance
+of getting one of the right answers with this algorithm '''
