@@ -6,25 +6,27 @@ from datetime import datetime
 from hashlib import sha256
 import qiskit
 
+# fonction qui calcule le hash d'un bloc
 def calculateHash(block):
 
     bloc = str(block.index) + str(block.previousHash) + str(block.timestamp) + str(block.data) + str(block.nonce)
     return (sha256(bloc.encode('utf-8')).hexdigest())
 
-
+# fonction qui permettra de répéter un string
 def repeat(string, length):
     return (string * (int(length / len(string)) + 1))[:length]
 
-
+#définition d'un bloc
 class Block(object):
     def __init__(self, index, previousHash, timestamp, data):
         self.index = index
         self.previousHash = previousHash
         self.timestamp = timestamp
         self.data = data
-        self.nonce = 0
+        self.nonce = 0 
         self.hash = calculateHash(self)
-
+#méthode qui détermine le bloc suivant, on calculera différentes valeurs de signatures ici sha-256 pour le bloc 
+#pour déterminer en fonction du précédent et de ses donnée
     def mineBlock(self, difficulty):
         zeros = repeat("0", difficulty)
         self.nonce = 0
@@ -32,20 +34,21 @@ class Block(object):
             self.nonce += 1
             self.hash = calculateHash(self)
 
-
+#la blockchain sera ici une liste de blocs, on prendra en compte la génération du premier bloc.
 class Blockchain(object):
     def __init__(self, difficulty):
         self.difficulty = difficulty
         self.blocks = []
-
+        
+        #On génére un premier bloc manuel car pour miner il nous faut un bloc de départ
         genesisBlock = Block(0, None, datetime.now(), "Genesis block")
         genesisBlock.mineBlock(self.difficulty)
         self.blocks.append(genesisBlock)
-
+    #création du nouveau bloc, nouveau bloc est l'index a n-1 incrémenté
     def newBlock(self, data):
         latestBlock = self.blocks[-1]
         return (Block(latestBlock.index + 1, latestBlock.hash, datetime.now(), data))
-
+    #On mine le bloc et on l'ajoute à la suite de la liste qui représente la blockchain
     def addBlock(self, block):
         block.mineBlock(self.difficulty)
         self.blocks.append(block)
