@@ -17,16 +17,15 @@ Les ordinateurs quantiques deviendront une réelle menace de sécurité quant au
 Création d’un éco-système financier décentralisé quantique, fonctionnant sur un principe de blockchain. 
 Le hash des blocs ne pourra être effectué que par puissance de calcul Quantique, étant donné qu’un ordinateur classique serait désuet.
 Le système de transfert de clés lors des transactions serait basé sur le Post Quantum Cryptography ce qui permettrait de résister aux attaques quantiques visant à détourner les clés lors des transactions. 
-Avant de pouvoir mettre en place le systeme de QKD (quantum key distribution) qui assurerais la sécurité total des transactions, c'est un système inviolable mais qui requiert une connexion physique entre les ordinateurs quantique qui va mettre du temps à être mis en place.
 Cette blockchain aurait pour bénéfice la rapidité d’exchange, limitant les frais de transaction interne induits par différentes saturations. 
 De plus la sécurité y serait optimum par la puissance de calcul déployée, ce qui empêcherait des recalculs de bloc déjà validé par la Blockchain.
 
 <H2>Sources à consulter </H2>
-<li>Hackathon 2021.2.pdf</li>
+<li>[Hackathon 2021.2.pdf](https://github.com/Adem-rahal/Qblockchain/blob/main/Hackathon%202021.2.pdf)</li>
 <ul><li>Fichier qui explique notre vision, les reflexions apportées à notre projet, ainsi que les avantages, risques et solutions apportées.</li></ul>
-<li>blockchain.py</li>
+<li>[blockchain.py](https://github.com/Adem-rahal/Qblockchain/blob/main/blockchain.py)</li>
 <ul><li>Contient l'ensemble du code de notre blockchain. Nous allons ajouter "soon" le Quantum Proof. [Mise à jour en cours]</li></ul>
-<li>grover_minning.py</li>
+<li>[grover_minning.py](https://github.com/Adem-rahal/Qblockchain/blob/main/grover_minning.py)</li>
 <ul><li>Code source qui contient la totalité de l'algorithme qui permet de miner avec un ordinateur quantique. (on utilise l'annulation d'amplitude de l'algorithm de grover pour retrouver les hash respectant la condition de la target <=k bien plus rapidement qu`avec un ordinateur classic) </li></ul>
 
   
