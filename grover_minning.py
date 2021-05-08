@@ -4,9 +4,19 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
+'''Here we are looking to build a minning algorithm that would give the 
+advantage to quantum computers in our new blockchain. For this we implement a
+Toy example using grover's algorithm on 6 qubit to find the solution to a hash 
+problem to solve the PoW (proof of work) validation method on a blockchain.
+We use a toy Hash exemple too to encrypt the entries with 2^6 possible 
+encryption.
+Note that this algorithm could also be used to attack current blockchains such 
+as bitcoins, to "mine" quicker than the other miners.'''
+
 #k is the targeted value that we want to equal or be under than (x <= k)
 k=3
 
+#The hash function is here to test the code it will be improved later
 def hash(x):
     return x
 
@@ -21,15 +31,14 @@ def phase_oracle(n, k, name = 'Oracle'):
         oracle_matrix[0,0] = -1
     
     else:
-    #add the -1 phase to elements that's satisfy the mining challenge H(x) <k
+    #add the -1 phase to elements that's satisfy the mining challenge H(x) <= k
         
         for i in range(2**n):
             if hash(i) <= k:
-                
                 oracle_matrix[i, i] = -1
                 marked_elements_counter+=1
 
-    # convert your matrix (called oracle_matrix) into an operator
+    #convert your matrix (called oracle_matrix) into an operator
     qc.unitary(Operator(oracle_matrix), range(n))
 
     return [qc,marked_elements_counter]
