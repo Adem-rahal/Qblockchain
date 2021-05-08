@@ -1,5 +1,8 @@
 # Qblockchain by Crypto Babies
+
+:::info
 By Adem, Nathan, Victor & Bastien
+:::
 
 <H2>Présentation du Projet </H2>
 
