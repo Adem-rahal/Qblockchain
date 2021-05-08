@@ -22,9 +22,9 @@ De plus la sécurité y serait optimum par la puissance de calcul déployée, ce
 
 <H2>Sources à consulter </H2>
 <li>Hackathon 2021.2.pdf</li>
-<ul><li>Fichier qui explique notre vision, les reflexions apportées à notre projet, ainsi que les avantages, risiques et solutions apportées.</li></ul>
+<ul><li>Fichier qui explique notre vision, les reflexions apportées à notre projet, ainsi que les avantages, risques et solutions apportées.</li></ul>
 <li>blockchain.py</li>
-<ul><li>Contient l'ensemble du code de notre blockchain. Nous allons ajouter soon le Quantum Proof [Mise à jour en cours]</li></ul>
+<ul><li>Contient l'ensemble du code de notre blockchain. Nous allons ajouter "soon" le Quantum Proof. [Mise à jour en cours]</li></ul>
 <li>grover_minning.py</li>
 <ul><li>Code source qui contient la totalité de l'algorithme qui permet de miner avec un ordinateur quantique.</li></ul>
   
