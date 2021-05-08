@@ -6,17 +6,17 @@ from datetime import datetime
 from hashlib import sha256
 import qiskit
 
-# fonction qui calcule le hash d'un bloc
+# function that calculates the hash of a block
 def calculateHash(block):
 
     bloc = str(block.index) + str(block.previousHash) + str(block.timestamp) + str(block.data) + str(block.nonce)
     return (sha256(bloc.encode('utf-8')).hexdigest())
 
-# fonction qui permettra de répéter un string
+# function that will repeat a string
 def repeat(string, length):
     return (string * (int(length / len(string)) + 1))[:length]
 
-#définition d'un bloc
+#definition of a block
 class Block(object):
     def __init__(self, index, previousHash, timestamp, data):
         self.index = index
@@ -25,8 +25,9 @@ class Block(object):
         self.data = data
         self.nonce = 0 
         self.hash = calculateHash(self)
-#méthode qui détermine le bloc suivant, on calculera différentes valeurs de signatures ici sha-256 pour le bloc 
-#pour déterminer en fonction du précédent et de ses donnée
+        
+#method that determines the next block, we will calculate different signature values here sha-256 for the block 
+#to determine the next block according to the previous one and its data
     def mineBlock(self, difficulty):
         zeros = repeat("0", difficulty)
         self.nonce = 0
@@ -34,25 +35,30 @@ class Block(object):
             self.nonce += 1
             self.hash = calculateHash(self)
 
-#la blockchain sera ici une liste de blocs, on prendra en compte la génération du premier bloc.
+#The blockchain will be here a list of blocks, we will take into account the generation of the first block.
 class Blockchain(object):
     def __init__(self, difficulty):
         self.difficulty = difficulty
         self.blocks = []
         
-        #On génére un premier bloc manuel car pour miner il nous faut un bloc de départ
+        #We generate a first manual block because to mine we need a starting block
         genesisBlock = Block(0, None, datetime.now(), "Genesis block")
         genesisBlock.mineBlock(self.difficulty)
         self.blocks.append(genesisBlock)
-    #création du nouveau bloc, nouveau bloc est l'index a n-1 incrémenté
+        
+    #creation of the new block, new block is the index a n-1 incremented
     def newBlock(self, data):
         latestBlock = self.blocks[-1]
         return (Block(latestBlock.index + 1, latestBlock.hash, datetime.now(), data))
-    #On mine le bloc et on l'ajoute à la suite de la liste qui représente la blockchain
+    
+    #We mine the block and add it to the list that represents the blockchain
     def addBlock(self, block):
         block.mineBlock(self.difficulty)
         self.blocks.append(block)
-
+        
+    #Here we will test the validity of the blockchain and the "child" blocks
+    #The first block to be validated is special because it has no parent block, so we must check 
+    #the index and its hash (previous hash and hash)
     def isFirstBlockValid(self):
         firstBlock = self.blocks[0]
 
@@ -66,7 +72,8 @@ class Blockchain(object):
             return False
 
         return True
-
+    
+    #Validation of a traditional block. (verification n-1 + 1 of a block n; the previous hash and its hash)
     def isValidBlock(self, block, previousBlock):
         if previousBlock.index + 1 != block.index:
             return False
@@ -78,7 +85,8 @@ class Blockchain(object):
             return False
 
         return True
-
+    
+    #here we validate the blockchain itself, first valid block and if all its blocks are valid
     def isBlockchainValid(self):
         if not self.isFirstBlockValid():
             return False
@@ -90,7 +98,7 @@ class Blockchain(object):
                 return False
 
         return True
-
+    #Simple blockchain display
     def display(self):
         for block in self.blocks:
             chain = "Block #" + str(block.index) + " [" + "\n\tindex: " + str(
@@ -98,7 +106,6 @@ class Blockchain(object):
                 block.timestamp) + "\n\tdata: " + str(block.data) + "\n\thash: " + str(
                 block.hash) + "\n\tnonce: " + str(block.nonce) + "\n]\n"
             print(str(chain))
-
 
 if __name__ == '__main__':
     bchain = Blockchain(4)
