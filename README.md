@@ -1,4 +1,5 @@
 # Qblockchain by Crypto Babies
+By Adem, Nathan, Victor & Bastien
 
 <H2>Présentation du Projet </H2>
 
@@ -8,7 +9,8 @@ Devant la montée en puissance des cryptomonnaies et de la blockchain dans les a
 
 La cryptomonnaie est devenue majoritaire par rapport aux monnaies courantes (FIAT) : la cryptomonnaie se base sur une technologie, à l'inverse de la monnaie FIAT qui qui ne repose que sur la confiance.
 Nous partons du principe que la recherche et le développement concernant la technologie des ordinateurs quantiques sera amortie. 
-Par conséquent leur prix de vente sera bien inférieur à leur prix actuel, qui ne se chiffre quasiment qu’en frais de recherche, par rapport aux matériaux. Ce qui permettrait une acquisition, par un public plus conséquent, et donc induirait une possibilité de décentralisation de l’écosystème.
+Par conséquent leur prix de vente sera bien inférieur à leur prix actuel, qui ne se chiffre quasiment qu’en frais de recherche, par rapport aux matériaux. 
+Ce qui permettrait une acquisition, par un public plus conséquent, et donc induirait une possibilité de décentralisation de l’écosystème.
 Les ordinateurs quantiques deviendront une réelle menace de sécurité quant aux blockchains existantes préalablement (attaque sur la difficulté de calcul, probable dépassement de la puissance de calcul des 51 % …).
 
 Création d’un éco-système financier décentralisé quantique, fonctionnant sur un principe de blockchain. 
