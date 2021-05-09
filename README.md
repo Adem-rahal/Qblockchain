@@ -20,6 +20,11 @@ Le système de transfert de clés lors des transactions serait basé sur le Post
 Cette blockchain aurait pour bénéfice la rapidité d’exchange, limitant les frais de transaction interne induits par différentes saturations. 
 De plus la sécurité y serait optimum par la puissance de calcul déployée, ce qui empêcherait des recalculs de bloc déjà validé par la Blockchain.
 
+** Résultats **
+
+On à finalement réussi à avoir une POC (proof of concept) fonctionel sur l'algorithm (grover) qui serait utiliser pour le minage et qui donnerais l'avantage aux ordinateurs quantique et il pourrait être implementé assez facilement une fois qu'on aurait accèes à plusieurs ordinateurs quantique pour crée notre blockchain.
+La partie échange de clef aussi peut être facilement implémenter nous avons déjà les algoritme pour mais nous avons pas eu le temps de le faire ici en 2 jours.
+
 <H2>Sources à consulter </H2>
 <li>Hackathon_2021.rendu_final.pdf</li>
 <ul><li>Fichier qui explique notre vision, les reflexions apportées à notre projet, ainsi que les avantages, risques et solutions apportées.</li></ul>
