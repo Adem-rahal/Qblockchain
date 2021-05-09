@@ -21,7 +21,7 @@ Cette blockchain aurait pour bénéfice la rapidité d’exchange, limitant les 
 De plus la sécurité y serait optimum par la puissance de calcul déployée, ce qui empêcherait des recalculs de bloc déjà validé par la Blockchain.
 
 <H2>Sources à consulter </H2>
-<li>Hackathon 2021.2.pdf</li>
+<li>Hackathon_2021.rendu_final.pdf</li>
 <ul><li>Fichier qui explique notre vision, les reflexions apportées à notre projet, ainsi que les avantages, risques et solutions apportées.</li></ul>
 <li>blockchain.py</li>
 <ul><li>Contient l'ensemble du code de notre blockchain. Nous allons ajouter "soon" le Quantum Proof. [Mise à jour en cours]</li></ul>
